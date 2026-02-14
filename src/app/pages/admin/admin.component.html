@@ -1,0 +1,57 @@
+<div class="card">
+  <div class="card-header">Add Course</div>
+  <div class="card-body">
+    <form #courseForm="ngForm" (ngSubmit)="handleAddCourse(courseForm)">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter your title..."
+          id="title"
+          name="title"
+          #title="ngModel"
+          [(ngModel)]="model.title"
+          required
+        />
+        @if (title.invalid && title.touched) {
+          <div class="text-danger">Title is required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          rows="3"
+          placeholder="Write your description..."
+          id="description"
+          name="description"
+          #description="ngModel"
+          [(ngModel)]="model.description"
+          required
+        ></textarea>
+        @if (description.invalid && description.touched) {
+          <div class="text-danger">Description is required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Choose an image</label>
+        <input
+          type="file"
+          class="form-control"
+          id="image"
+          name="image"
+          accept="image/*"
+          [multiple]="false"
+          (change)="handleFileSelection($event)"
+          ngModel
+          required
+        />
+        @if (showError) {
+          <div class="text-danger">Image is required</div>
+        }
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
