@@ -1,0 +1,80 @@
+@use "../../styles/mixins" as *;
+@mixin primary__btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+.banner__section {
+  @include mainContainer;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  .banner__text {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #007382;
+    }
+    p {
+      font-size: 16px;
+      margin: 1rem 0rem;
+      font-weight: 400;
+      text-align: justify;
+    }
+    .btns__container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      button:first-child {
+        @include primary__btn;
+        background-color: #007382;
+        color: white;
+        border: 1px solid #007382;
+        &:hover {
+          background-color: white;
+          color: #007382;
+        }
+      }
+      button:last-child {
+        @include primary__btn;
+        background-color: white;
+        color: #007382;
+        border: 1px solid #007382;
+        &:hover {
+          background-color: #007382;
+          color: white;
+        }
+      }
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    height: 80vh;
+  }
+}
+
+.courses__main__container {
+  padding: 2rem;
+  background-color: #f0fafb;
+  .courses__container {
+    @include mainContainer;
+    h3 {
+      @include globalTitle;
+    }
+    .courses__items {
+      @include gridLayout;
+    }
+  }
+}

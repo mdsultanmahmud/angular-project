@@ -55,3 +55,15 @@
     </form>
   </div>
 </div>
+
+<div class="courses__items">
+  @for (item of courses; track item) {
+    <app-course-card
+      [course]="item"
+      [isDelete]="true"
+      (delCourse)="handleDeleteCourse($event)"
+    ></app-course-card>
+  } @empty {
+    <p>No Courses Added!!</p>
+  }
+</div>

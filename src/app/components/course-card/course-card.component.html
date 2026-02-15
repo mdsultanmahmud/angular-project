@@ -1,0 +1,16 @@
+<div class="course__card__container">
+  <div class="card__img">
+    <img [src]="course.image" alt="" />
+    @if (isDelete) {
+      <button (click)="handleDeleteCourse()">
+        <i class="bi bi-trash"></i>
+      </button>
+    }
+  </div>
+  <div class="card__text">
+    <h4>{{ course?.title }}</h4>
+    <p>
+      {{ course?.description }}
+    </p>
+  </div>
+</div>

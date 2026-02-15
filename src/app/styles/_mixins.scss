@@ -1,0 +1,20 @@
+@mixin globalTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-block: 2rem;
+  text-align: center;
+  color: #007382;
+  text-transform: capitalize;
+}
+
+@mixin mainContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0rem auto;
+}
+
+@mixin gridLayout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}

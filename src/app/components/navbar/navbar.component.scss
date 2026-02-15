@@ -7,6 +7,7 @@
   z-index: 1000;
 
   .container {
+    width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 14px 20px;
@@ -17,9 +18,9 @@
   }
 
   .logo {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 700;
-    color: #111827;
+    color: #007382;
   }
 
   .nav-links {
@@ -46,7 +47,6 @@
   }
 }
 
-/* ✅ responsive fix */
 @media (max-width: 767px) {
   .navbar {
     .nav-links {

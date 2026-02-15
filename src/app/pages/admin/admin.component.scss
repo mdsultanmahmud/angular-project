@@ -1,7 +1,8 @@
+@use "../../styles/mixins" as *;
 .card {
-  width: 95%;
-  max-width: 1200px;
-  margin: 2rem auto;
+  @include mainContainer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   .card-header {
     font-size: 1.8rem;
     font-weight: bold;
@@ -12,4 +13,9 @@
     margin: 2rem 1rem 1rem auto;
     font-size: 1rem;
   }
+}
+
+.courses__items {
+  @include mainContainer;
+  @include gridLayout;
 }

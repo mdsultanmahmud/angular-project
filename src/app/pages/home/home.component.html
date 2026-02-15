@@ -1,1 +1,33 @@
-<p>Wow, We are very excited for creating home page</p>
+<!-- Banner Section  -->
+<section class="banner__section">
+  <div class="banner__text">
+    <div>
+      <h1>Smart Inventory Management</h1>
+      <p>
+        Easily manage your products, track stock levels, and monitor updates in
+        real time. Designed to simplify your workflow and keep everything
+        organized in one place.
+      </p>
+      <div class="btns__container">
+        <button>Get Started</button>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <img src="images/banner.png" alt="Our Banner Section" />
+</section>
+
+<!-- Our Courses  -->
+@if (courses.length > 0) {
+  <section class="courses__main__container">
+    <div class="courses__container">
+      <h3>Our Courses</h3>
+      <div class="courses__items">
+        @for (item of courses; track item) {
+          <app-course-card [course]="item"></app-course-card>
+        }
+      </div>
+    </div>
+  </section>
+}
